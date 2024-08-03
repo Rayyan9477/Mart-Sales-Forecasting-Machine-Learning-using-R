@@ -219,11 +219,6 @@ table(Item_MRP_clusters$cluster) # display no. of observations in each cluster
 
 combi$Item_MRP_clusters = as.factor(Item_MRP_clusters$cluster)
 
-#or group them manually
-# combi[,Item_MRP_clusters := ifelse(Item_MRP < 69, "1st", 
-#                                    ifelse(Item_MRP >= 69 & Item_MRP < 136, "2nd",
-#                                           ifelse(Item_MRP >= 136 & Item_MRP < 203, "3rd", "4th")))]
-#-------------------------------------------------------------------------------------------------------------------------
 ## Label Encoding
 
 combi[,Outlet_Size_num := ifelse(Outlet_Size == "Small", 0,
